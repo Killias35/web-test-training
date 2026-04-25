@@ -7,13 +7,14 @@ Projet pédagogique destiné à l’apprentissage des tests automatisés web ave
 # 📁 Structure du projet
 
 
-web-test-training/
-│
-├── app/ # Application web à tester (HTML/CSS/JS simple)
-├── selectors/ # Guide des sélecteurs CSS / XPath / Cypress
-├── selenium/ # Tests Selenium + Page Object Model
-├── cypress/ # Tests Cypress
-└── README.md
+#### web-test-training
+#### /
+#### │
+#### ├── app/ # Application web à tester (HTML/CSS/JS simple)
+#### ├── selectors/ # Guide des sélecteurs CSS / XPath / Cypress
+#### ├── selenium/ # Tests Selenium + Page Object Model
+#### ├── cypress/ # Tests Cypress
+#### └── README.md
 
 
 ---
