@@ -1,0 +1,20 @@
+{
+  "name": "selenium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+   "scripts": {
+    "test-selenium": "mocha selenium/tests/",
+    "test-cypress": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chai": "^6.2.2",
+    "cypress": "^15.14.1",
+    "mocha": "^11.7.5",
+    "selenium-webdriver": "^4.43.0"
+  }
+}

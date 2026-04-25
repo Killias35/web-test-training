@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Commande</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Mini Shop</h1>
+</header>
+
+<div class="container">
+  <h2>Finaliser la commande</h2>
+
+  <input type="text" id="name" placeholder="Nom complet">
+  <input type="text" id="address" placeholder="Adresse">
+  <button id="orderBtn">Valider la commande</button>
+
+  <p id="message"></p>
+</div>
+
+<script>
+document.getElementById("orderBtn").onclick = function() {
+  const name = document.getElementById("name").value;
+  const address = document.getElementById("address").value;
+  const message = document.getElementById("message");
+
+  if (name && address) {
+    localStorage.removeItem("cart");
+
+    message.textContent = "Commande validée";
+    message.className = "success";
+
+    setTimeout(() => {
+      window.location.href = "success.html";
+    }, 1000);
+  } else {
+    message.textContent = "Veuillez remplir tous les champs";
+    message.className = "error";
+  }
+};
+</script>
+
+</body>
+</html>

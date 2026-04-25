@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Produits</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Mini Shop</h1>
+  <nav>
+    <a href="cart.html">Panier</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Produits</h2>
+
+  <p id="last_product"></p>
+  <div class="product-list" id="products"></div>
+</div>
+
+<script>
+const products = [
+  { id: 1, name: "Casque Audio", price: 50 },
+  { id: 2, name: "Clavier", price: 30 },
+  { id: 3, name: "Souris", price: 20 }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  const div = document.createElement("div");
+  div.className = "product";
+
+  div.innerHTML = `
+    <h3>${p.name}</h3>
+    <p>${p.price} €</p>
+    <p id='nb-${p.id}'>0</p>
+    <button onclick="addToCart(${p.id})">Ajouter au panier</button>
+  `;
+
+  container.appendChild(div);
+});
+
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  const lastProduct = document.getElementById("last_product");
+  const nb = document.getElementById(`nb-${id}`);
+  nb.textContent = parseInt(nb.textContent) + 1;
+  lastProduct.textContent = `Dernier produit ajouté: ${products.find(p => p.id === id).name}`;
+}
+</script>
+
+</body>
+</html>
