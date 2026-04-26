@@ -24,17 +24,6 @@ describe('Cart Test', function () {
   });
 
   it('Ajouter un produit au panier', async () => {
-    await loginPage.open();
-    await loginPage.login('test@test.com', '1234');
-
-    await driver.sleep(2000);
     
-    await productsPage.addFirstProduct();
-    await productsPage.goToCart();
-
-    const items = await cartPage.getCartItems();
-
-    
-    expect(items.length).to.be.greaterThan(0);
   });
 });

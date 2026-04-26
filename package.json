@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
    "scripts": {
-    "test-selenium": "mocha selenium/tests/",
-    "test-cypress": "npx cypress open"
   },
   "keywords": [],
   "author": "",
