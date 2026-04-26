@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "test-selenium": "mocha selenium/tests/",
+    "test-selenium-reporter": "mocha selenium/tests/ --reporter mochawesome",
     "test-cypress": "npx cypress open"
   },
   "keywords": [],
@@ -16,5 +17,8 @@
     "cypress": "^15.14.1",
     "mocha": "^11.7.5",
     "selenium-webdriver": "^4.43.0"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.4"
   }
 }
