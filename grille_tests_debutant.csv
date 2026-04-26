@@ -1,0 +1,10 @@
+﻿Situation,Test à choisir,Pourquoi,Exemple
+Je teste une petite fonction seule,Test unitaire,Le code est simple et isolé,"Calcul, validation, formatage"
+Je vérifie que plusieurs parties du code fonctionnent ensemble,Test d’intégration,On teste la communication entre modules,API + base de données
+Je teste comme un vrai utilisateur,Test E2E,On vérifie tout le parcours complet,Connexion + achat + paiement
+Je veux des tests rapides à lancer souvent,Test unitaire,Très rapide et facile à maintenir,Tests à chaque modification
+Je veux vérifier une connexion à la base de données,Test d’intégration,Teste les vraies connexions techniques,Sauvegarde utilisateur
+Je veux vérifier que le site fonctionne vraiment,Test E2E,Teste l’application entière,Commander un produit
+J’ai corrigé un petit bug précis,Test unitaire,Idéal pour vérifier un cas spécifique,Erreur de calcul
+J’ai un problème dans tout un processus,Test E2E,Permet de reproduire un bug complet,Paiement échoué
+Je prépare une mise en production,Les 3 types,Chaque niveau réduit un risque différent,Validation finale
