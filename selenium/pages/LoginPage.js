@@ -11,7 +11,9 @@ class LoginPage {
 
   async login(email, password) {
     await this.driver.findElement(By.id('email')).sendKeys(email);
+    await setTimeout(1000);
     await this.driver.findElement(By.id('password')).sendKeys(password);
+    await setTimeout(1000);
     await this.driver.findElement(By.id('loginBtn')).click();
   }
 
