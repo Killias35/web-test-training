@@ -252,3 +252,35 @@ mkdir .github\workflows
 puis le fichier de configuration
 
 .github/workflows/e2e-tests.yml
+
+puis ajouter le contenu du fichier
+
+`
+name: E2E Tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - run: npm start &
+
+      - run: npx wait-on http://127.0.0.1:8080
+
+      - run: npx cypress run
+`
+
+Desormais dans github, a chaque push sur 'main', le CI/CD va executer les scripts de tests e2e et envoyer le rapport
+Pour voir les tests et resultats, aller sur l'onglet Actions du repository github
