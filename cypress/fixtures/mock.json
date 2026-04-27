@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Jean Dupont",
+    "email": "jean.dupont@test.com",
+    "address": {
+      "city": "Paris"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Marie Martin",
+    "email": "marie.martin@test.com",
+    "address": {
+      "city": "Lyon"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Paul Bernard",
+    "email": "paul.bernard@test.com",
+    "address": {
+      "city": "Marseille"
+    }
+  }
+]

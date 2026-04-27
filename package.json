@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npx live-server app",
     "test-selenium": "mocha selenium/tests/",
     "test-selenium-reporter": "mocha selenium/tests/ --reporter mochawesome",
-    "test-cypress": "npx cypress open"
+    "test-cypress": "npx cypress open",
+    "test:e2e": "cypress run"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +16,12 @@
   "type": "commonjs",
   "dependencies": {
     "chai": "^6.2.2",
-    "cypress": "^15.14.1",
     "mocha": "^11.7.5",
     "selenium-webdriver": "^4.43.0"
   },
   "devDependencies": {
-    "mochawesome": "^7.1.4"
+    "cypress": "^15.14.1",
+    "mochawesome": "^7.1.4",
+    "wait-on": "^9.0.5"
   }
 }

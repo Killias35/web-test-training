@@ -61,12 +61,6 @@ live-server app
 
 # 🧪 Installation Selenium
 
-Se placer dans le dossier :
-
-
-cd selenium
-
-
 ## 1. Initialiser le projet
 
 npm init -y
@@ -117,12 +111,6 @@ cela crée un raccourcis permettant de faire "npx mocha tests/" en écrivant jus
 ---
 
 # 🧪 Installation Cypress
-
-Se placer dans le dossier :
-
-
-cd cypress
-
 
 ## 1. Initialiser (si nécessaire)
 
@@ -252,3 +240,15 @@ Contient :
 - Objectif : apprentissage, pas production
 
 ---
+
+
+# Installation du CI/CD
+
+crée le dossier .github a la racine puis workflow
+
+mkdir .github
+mkdir .github\workflows
+
+puis le fichier de configuration
+
+.github/workflows/e2e-tests.yml
