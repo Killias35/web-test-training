@@ -6,5 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // pas de config avancée nécessaire
     }
-  }
+  },
+  screenshotOnRunFailure: true,
+  video: true,
 });
