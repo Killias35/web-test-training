@@ -17,8 +17,39 @@ jobs:
 
       - run: npm ci
 
-      - run: npm start &
+      # Lance ton app en arrière-plan
+      - name: Start app
+        run: npm start &
 
-      - run: npx wait-on http://127.0.0.1:8080
+      # Attend que l'app soit prête
+      - name: Wait for app
+        run: npx wait-on http://127.0.0.1:8080
 
-      - run: npx cypress run
+      # Lance Cypress
+      - name: Run Cypress
+        run: npx cypress run
+
+      # Debug : liste les fichiers générés
+      - name: List Cypress files
+        if: always()
+        run: |
+          ls -R cypress/screenshots || true
+          ls -R cypress/videos || true
+
+      # Upload screenshots
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
+
+      # Upload vidéos
+      - name: Upload videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore
